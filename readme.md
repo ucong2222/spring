@@ -31,3 +31,48 @@
 - javac.exe, java.exe를 다른 디렉토리에서도 실행할 수 있도록 하기 위해 환경 변수(Path)에 bin 경로 등록
 
 #### 2-3 IDE(STS4) 다운로드
+
+# 3. 스프링 프로젝트 생성
+
+#### 3-1 프로젝트 생성
+
+#### 3-2 pom.xml 작성
+
+```
+  <dependencies>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>4.1.0.RELEASE</version>
+	</dependency>
+  </dependencies>
+
+  <build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+```
+
+ ***에러가 날 경우, Maven -> Update project***
+
+#### 3-3 폴더 및 pom.xml파일의 이해
+
+1) 폴더의 이해
+- spring 프로젝트 : 스프링 프로젝트 Root
+- spring/src/main/java : 앞으로 만들어지는 자바 파일들이 관리되는 폴더, java 파일 관리
+- spring/src/main/resouce : 자원을 관리하는 폴더로 스프링 설정 파일(XML) 또는 프로퍼티 파일 등 관리, 지원파일 관리
+
+  ***java, resources 폴더는 스프링 프레임워크의 기본 구조를 이루는 폴더로 개발자는 이대로 폴더 구성해야됨***
+
+2) pom.xml파일의 이해
+- pom.xml 파일은 메이븐 설정파일로 메이븐은 라이브러리를 연결해주고, 빌드를 위한 플랫폼
+- 필요한 라이브러리만 다운로드해서 사용
