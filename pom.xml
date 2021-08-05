@@ -4,6 +4,7 @@
   <artifactId>spring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <!-- 내가 필요한 모듈 명시하면 라이브러리 자동으로 받아줌 -->
   <dependencies>
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -12,6 +13,7 @@
 	</dependency>
   </dependencies>
 
+  <!-- 실제로 빌드될 때 필요한 빌드 명령 -->
   <build>
 		<plugins>
 			<plugin>

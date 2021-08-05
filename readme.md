@@ -76,3 +76,28 @@
 2) pom.xml파일의 이해
 - pom.xml 파일은 메이븐 설정파일로 메이븐은 라이브러리를 연결해주고, 빌드를 위한 플랫폼
 - 필요한 라이브러리만 다운로드해서 사용
+
+## 4. 처음해 보는 스프링 프로젝트
+
+#### 4-1 Java파일을 이용한 프로젝트 실행
+
+```java
+TranspotationWalk transpotationWalk = new TranspotationWalk();
+transpotationWalk.move();
+```
+
+#### 4-2 우선 따라 해 보는 스프링 프로젝트
+- spring 방식의 '의존'을 이용하기 위해서는 Main에서 TransportationWalk 객체를 직접 생성하지 않고, 스프링 설정 파일(XML)을 이용
+- 가장 큰 차이점은 Java파일에서 이용한 new 연산자를 사용하지 않고 스프링 설정파일(XML)을 이용하는 것
+
+```java
+// spring container에 접근
+GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationContext.xml");
+
+// container에있는 Bean(객체) 가져오기
+TranspotationWalk transpotationWalk = ctx.getBean("id", 데이터타입);
+transpotationWalk.move();
+		
+// resources 반환
+ctx.close();
+```
