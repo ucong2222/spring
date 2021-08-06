@@ -101,3 +101,8 @@ transpotationWalk.move();
 // resources 반환
 ctx.close();
 ```
+
+## 5. 또 다른 프로젝트 생성 방법
+
+#### 5-1 폴더(java, resources)와 파일(pom.xml) 만들기
+#### 5-2 이클립스에서 import하기
